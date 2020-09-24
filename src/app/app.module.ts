@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { EspectaculosComponent } from './espectaculos/espectaculos.component';
+import { NacionalComponent } from './nacional/nacional.component';
+import { NewsCardComponent } from './components/news-card/news-card.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 
@@ -14,7 +18,11 @@ import { EspectaculosComponent } from './espectaculos/espectaculos.component';
     AppComponent,
     InicioComponent,
     RegistrarComponent,
-    EspectaculosComponent
+    EspectaculosComponent,
+    NacionalComponent,
+    NewsCardComponent,
+    NavbarComponent,
+    DetailComponent
     
   ],
   imports: [

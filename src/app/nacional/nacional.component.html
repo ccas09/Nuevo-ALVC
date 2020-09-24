@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<!--EMPIEZA EL BODY-->
+<body>
+  <!--TITULO 1-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div style="width: 1340px;">
+              <h5 class="bg-warning">Noticias ALVC</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!--SUBTITULO-->   
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+             <div class="mx-auto" style=" width: 400px;" >
+                <h3> Nacional</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="row mt-5">
+              <div class="col-9"
+              *ngFor="let news of inews"
+              >
+                  <app-news-card [news] = "news">
+                    
+                  </app-news-card>
+              </div>
+          </div>
+      </div>
