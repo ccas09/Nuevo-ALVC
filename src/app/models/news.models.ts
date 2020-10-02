@@ -7,4 +7,10 @@ export interface iNews{
     date: string;
     journalist: string;
     category: string;
+    views: number;
+}
+
+export interface logoImage{
+    _id: string;
+    imagelogo: string;
 }

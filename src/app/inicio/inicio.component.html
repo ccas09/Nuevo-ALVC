@@ -2,84 +2,34 @@
 
 <!--EMPIEZA EL BODY-->
   <!--TITULO 1-->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div style="width: 1340px;">
-          <h5 class="bg-warning">Noticias ALVC</h5>
-        </div>
-      </div>
-    </div>
-  </div>
 <body>
   <!--SUBTITULO-->   
-  <div class="container-fluid">
+  <div class="container-fluid text-center">
     <div class="row">
       <div class="col-md-12">
-         <div class="mx-auto" style=" width: 400px;" >
-            <h3> Ultimas Noticias</h3>
+         <div class="mx-auto">
+            <h3> Últimas Noticias</h3>
           </div>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card" style= "width: 18rem ;" style="margin-top: 40px;" >
-          
-          <img src="assets/img/sirenita.jpg" class="card-img-top" alt="..." class="tamanoImagen" >
-          <div class="card-body">
-            
-            <h5 class="card-title">Disney anuncia a la actriz que interpretará a Ariel en nueva versión de "La Sirenita"</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Ver más</a>
-            <img src="assets/img/ojo.jpg" class="tamanoImagenOjo" >
+  <div class="container">
+      <div class="row">
+        <div class="card-deck" >
+          <div *ngFor="let news of inews" class="col-md-4" >     
+            <div *ngIf="Llego()" >  
+              <app-news2-card [news] ="news"></app-news2-card> 
+           </div> 
+          </div>
+        </div>
+      </div>
+    </div> 
 
-          </div>
-       
-          
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" style= "width: 18rem ;" style="margin-top: 40px;" >
-          
-          <img src="assets/img/manalich.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Exministro Mañalich por fallecidos durante la pandemia: "No me siento responsable"</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Ver más</a>
-            <img src="assets/img/ojo.jpg" class="tamanoImagenOjo" >
+    <app-footer></app-footer>   
 
-          </div>
-          
-          
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" style= "width: 18rem ;" style="margin-top: 40px;" >
-          
-          <img src="assets/img/trumppppp.jpg" class="card-img-top" alt="..." class="tamanoImagen2">
-          <div class="card-body">
-            <h5 class="card-title">Trump anuncia que aprobó un acuerdo para la compra de TikTok</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Ver más</a>
-            <div class="row" class="col-md-6">
-             
-            <img src="assets/img/ojo.jpg" class="tamanoImagenOjo" >
-            <div class="alert alert-light" role="alert" class="tamanoVisualizaciones" >
-              1
-            
-          </div>
-          </div>
-          </div>
-          
-          
-        </div>
-      </div>
-    </div>
-  </div>
+</body>
   
           
-               
-</body>
+
+

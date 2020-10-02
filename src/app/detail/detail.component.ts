@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { iNews } from '../models/news.models';
 import { NewsService } from '../services/news/news.service';
@@ -9,7 +9,7 @@ import { NewsService } from '../services/news/news.service';
   styleUrls: ['./detail.component.less']
 })
 export class DetailComponent implements OnInit {
-
+  @Input()
   public id: number;
   public inews: iNews;
 
@@ -19,7 +19,8 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.inews = this.newsService.getProductById(this.id);
+    
+    this.inews = this.newsService.getNewsById(this.id);
   }
 
 }

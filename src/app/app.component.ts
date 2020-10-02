@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { iNews } from './models/news.models';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator'
+import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,11 @@ import { iNews } from './models/news.models';
 })
 export class AppComponent {
   title = 'mi-proyecto';
+  dataSource = new MatTableDataSource();
 
-  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOninit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
