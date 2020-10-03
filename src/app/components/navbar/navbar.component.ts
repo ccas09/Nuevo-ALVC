@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { iNews, logoImage } from 'src/app/models/news.models';
+
 
 @Component({
   selector: 'app-navbar',
